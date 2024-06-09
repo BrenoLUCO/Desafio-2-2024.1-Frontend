@@ -1,0 +1,214 @@
+/* General styles */
+body, html {
+    border: 2px solid #000;
+    box-sizing: border-box; /* Garante que a borda não aumente o tamanho do body */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #010101;
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto; /* Centraliza horizontalmente */
+    padding: 20px;
+    box-sizing: border-box;
+    
+}
+
+/* Navigation bar styles */
+.nav-bar {
+    width: calc(100% - 60px); /* Reduz a largura para caber no espaço com padding */
+    background-color: #010101; /* Cor de fundo do retângulo */
+    padding: 20px 10px; /* Aumenta o tamanho do retângulo */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 2px solid #fff; /* Bordas brancas */
+    position: fixed; /* Posicionamento fixo */
+    top: 20px; /* Coloca a barra de navegação abaixo do topo */
+    left: 20px; /* Coloca a barra de navegação à esquerda */
+    z-index: 1; /* Garante que a barra de navegação fique acima dos outros elementos */
+}
+.nav-bar a:hover {
+    color: #f0681a; /* Cor dos ícones ao passar o mouse */
+}
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bar ul li {
+    margin-right: 40px;
+    margin-left: 60px;
+}
+
+.nav-bar ul li.contact {
+    margin-left: auto;
+}
+
+.nav-bar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px; /* Aumenta o tamanho do texto */
+    font-weight: bold;
+}
+
+/* Content section styles */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 150px; /* Ajuste para ficar abaixo da barra de navegação */
+    padding-left: 100px; /* Adiciona espaço à esquerda para evitar sobreposição */
+}
+
+.text-section {
+    max-width: 50%;
+}
+
+.text-section h1 {
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.text-section p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+/* Image section styles */
+.image-section img {
+    max-width: 100%;
+    border: 5px solid #010101;
+    border-radius: 10px;
+    margin-left: 40px;
+}
+
+/* Social media container styles */
+.social-media-container {
+    position:fixed; /* Posicionamento fixo */
+    top: 20px; /* Coloca o contêiner de mídia social abaixo do topo */
+    left: 20px; /* Coloca o contêiner de mídia social à esquerda */
+    height: calc(100% - 50px); /* Ajusta a altura para caber no espaço com padding */
+    width: 120px; /* Define a largura desejada */
+    padding: 20px 10; /* Espaçamento interno */
+    border: 2px solid #fff; /* Bordas brancas */
+    border-radius: 0 5px 5px 0; /* Bordas arredondadas à direita */
+    background-color: #010101; /* Cor de fundo */
+    display: flex;
+    flex-direction: column; /* Coloca os itens na vertical */
+    justify-content: flex-end; /* Alinha os itens ao fundo */
+    align-items: center; /* Centraliza os itens na horizontal */
+    z-index: 0; /* Garante que o contêiner de mídia social fique abaixo da barra de navegação */
+}
+
+.social-media a {
+    margin: 10px 0; /* Espaçamento entre os ícones */
+    color: #fff; /* Cor dos ícones */
+    font-size: 35px; /* Tamanho dos ícones */
+    text-decoration: none;
+
+}
+
+.social-media a:hover {
+    color: #f0681a; /* Cor dos ícones ao passar o mouse */
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px;
+        margin-top: 200px; /* Ajuste adicional para evitar sobreposição */
+    }
+
+    .text-section, .image-section {
+        max-width: 100%;
+    }
+
+    .text-section h1 {
+        font-size: 20px;
+        padding: 0 40px;
+        
+    }
+
+    .text-section p {
+        font-size: 10px;
+        padding: 0 50px;
+    }
+
+    .image-section img {
+        margin: 20px 20px;
+    }
+
+    .nav-bar {
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    .social-media-container {
+        width: 40px; /* Ajusta a largura em telas menores */
+        padding: 10px 0;
+    }
+}
+
+/* Estilos para a página de serviços */
+.service-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 150px; /* Ajuste para ficar abaixo da barra de navegação */
+    padding: 20px;
+}
+
+.service-item {
+    background-color: #fff;
+    color: #1a1a1a;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px; /* Define a largura dos itens */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.service-item .icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ff8c00; /* Cor do ícone */
+}
+
+.service-item h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 16px;
+    line-height: 1.5;
+    
+}
+
+.logo {
+    width: 80px; /* Ajuste este valor para a largura desejada */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.logo-bar {
+    height: 100px; /* Ajuste este valor para a altura desejada */
+    width: 2px; /* Ajuste este valor para a largura desejada */
+    background-color: #000; /* Ajuste este valor para a cor desejada */
+    margin-left: 10px; /* Ajuste este valor para o espaço desejado entre a logo e a barra */
+}
+
+
+
+
